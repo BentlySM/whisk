@@ -1,0 +1,61 @@
+:root {
+  --paper: #FBF6EC;
+  --ink: #1e2420;
+  --muted: #5c6560;
+  --accent: #C0623F;
+  --soft: #F3E2D6;
+  --rule: #c9cfc6;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: "Source Sans Pro", "Segoe UI", system-ui, sans-serif;
+  background: var(--paper);
+  color: var(--ink);
+  line-height: 1.55;
+}
+header, footer {
+  background: var(--accent);
+  color: #fff;
+  padding: 0.85rem 1.25rem;
+}
+header a, footer a { color: #fff; text-decoration: none; font-weight: 600; }
+header nav { float: right; }
+header nav a { margin-left: 1rem; font-weight: 500; opacity: 0.95; }
+header::after { content: ""; display: block; clear: both; }
+main { max-width: 720px; margin: 0 auto; padding: 1.5rem 1.25rem 3rem; }
+h1 { color: var(--accent); font-size: 1.85rem; margin-bottom: 0.4rem; }
+h2 { color: var(--accent); font-size: 1.25rem; margin-top: 2rem; }
+.tagline { color: var(--muted); font-style: italic; margin-top: 0; }
+.hero {
+  display: flex; gap: 1.25rem; align-items: center; flex-wrap: wrap;
+  background: var(--soft); border: 2px solid var(--accent); border-radius: 14px;
+  padding: 1.25rem; margin: 1.25rem 0;
+}
+.hero img {
+  width: 160px; height: 160px; object-fit: cover; border-radius: 12px;
+  border: 2px solid var(--accent);
+}
+.cta {
+  display: block; background: var(--accent); color: #fff !important;
+  text-decoration: none; font-weight: 700; padding: 0.9rem 1.1rem;
+  border-radius: 12px; margin: 1.25rem 0; text-align: center;
+}
+.cta:hover { filter: brightness(1.06); }
+ul.features { padding-left: 1.2rem; }
+ul.features li { margin: 0.35rem 0; }
+.sample-box {
+  border: 2px dashed var(--rule); border-radius: 12px; padding: 1rem 1.2rem;
+  background: #fff;
+}
+.btn {
+  display: inline-block; background: var(--ink); color: #fff;
+  text-decoration: none; font-weight: 600; padding: 0.65rem 1rem;
+  border-radius: 10px; margin-top: 0.5rem;
+}
+.btn:hover { filter: brightness(1.1); }
+footer { text-align: center; font-size: 0.9rem; margin-top: 2rem; }
+@media (max-width: 560px) {
+  header nav { float: none; margin-top: 0.5rem; }
+  header nav a { margin-left: 0; margin-right: 0.75rem; }
+}
